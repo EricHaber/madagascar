@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir Madagascar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Découvrir Madagascar</h1>
+    </header>
+    <main>
+        <section class="description">
+            <p>Madagascar, une île située dans l'océan Indien, est connue pour sa biodiversité unique et son héritage culturel riche. Ancienne colonie française, elle conserve le français comme langue officielle aux côtés du malgache.</p>
+        </section>
+        <section class="info">
+            <div class="card">
+                <h2>Géographie</h2>
+                <p>Une île fascinante située au large de l'Afrique de l'Est.</p>
+            </div>
+            <div class="card">
+                <h2>Histoire</h2>
+                <p>Colonisée par la France en 1896, indépendante depuis 1960.</p>
+            </div>
+            <div class="card">
+                <h2>Culture</h2>
+                <p>Un mélange unique de traditions africaines et asiatiques.</p>
+            </div>
+        </section>
+        <section class="fun-fact">
+            <button onclick="showFact()">Découvrir un fait amusant</button>
+            <p id="fact">Cliquez pour un fait amusant !</p>
+        </section>
+    </main>
+    <script>
+        const facts = [
+            "Madagascar est la quatrième plus grande île du monde.",
+            "Le français est l'une des langues officielles, héritée de la colonisation française.",
+            "Environ 90 % de la faune de Madagascar est unique à l'île.",
+            "L'indépendance de Madagascar a été déclarée le 26 juin 1960.",
+            "La capitale de Madagascar est Antananarivo."
+        ];
+        function showFact() {
+            document.getElementById("fact").innerText = facts[Math.floor(Math.random() * facts.length)];
+        }
+    </script>
+</body>
+</html>
