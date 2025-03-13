@@ -5,34 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Découvrir Madagascar</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Découvrir Madagascar</h1>
     </header>
     <main>
+        <section class="hero">
+            <img src="madagascar.jpg" alt="Vue aérienne de Madagascar">
+            <div class="overlay">
+                <h2>Un joyau unique de l'océan Indien</h2>
+            </div>
+        </section>
+        
         <section class="description">
             <p>Madagascar, une île située dans l'océan Indien, est connue pour sa biodiversité unique et son héritage culturel riche. Ancienne colonie française, elle conserve le français comme langue officielle aux côtés du malgache.</p>
         </section>
+        
         <section class="info">
             <div class="card">
+                <img src="geographie.jpg" alt="Carte de Madagascar">
                 <h2>Géographie</h2>
                 <p>Une île fascinante située au large de l'Afrique de l'Est.</p>
             </div>
             <div class="card">
+                <img src="histoire.jpg" alt="Histoire de Madagascar">
                 <h2>Histoire</h2>
                 <p>Colonisée par la France en 1896, indépendante depuis 1960.</p>
             </div>
             <div class="card">
+                <img src="culture.jpg" alt="Culture malgache">
                 <h2>Culture</h2>
                 <p>Un mélange unique de traditions africaines et asiatiques.</p>
             </div>
         </section>
+        
         <section class="fun-fact">
             <button onclick="showFact()">Découvrir un fait amusant</button>
             <p id="fact">Cliquez pour un fait amusant !</p>
         </section>
     </main>
+    
     <script>
         const facts = [
             "Madagascar est la quatrième plus grande île du monde.",
@@ -44,6 +58,19 @@
         function showFact() {
             document.getElementById("fact").innerText = facts[Math.floor(Math.random() * facts.length)];
         }
+
+        // GSAP Scroll Effect
+        gsap.from(".card", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".info",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
     </script>
 </body>
 </html>
