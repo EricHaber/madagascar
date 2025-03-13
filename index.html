@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Découvrir Madagascar</title>
+    <title>Découvrir Cap-Vert</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Découvrir Madagascar</h1>
+        <h1>Découvrir Cap-Vert</h1>
     </header>
     <main>
         <section class="hero">
-            <img src="madagascar.jpeg" alt="Vue aérienne de Madagascar">
+            <img src="cap-vert.jpg" alt="Vue aérienne du Cap-Vert">
             <div class="overlay">
-                <h2>Un joyau unique de l'océan Indien</h2>
+                <h2>Un archipel fascinant au large de l'Afrique</h2>
             </div>
         </section>
         
         <section class="description">
-            <p>Madagascar, une île située dans l'océan Indien, est connue pour sa biodiversité unique et son héritage culturel riche. Ancienne colonie française, elle conserve le français comme langue officielle aux côtés du malgache.</p>
+            <p>Le Cap-Vert est un archipel situé dans l'océan Atlantique, connu pour ses paysages volcaniques spectaculaires et son riche héritage culturel. Ancienne colonie portugaise, il conserve le portugais comme langue officielle.</p>
         </section>
         
         <section class="info">
             <div class="card">
-                <img src="geographie.jpeg" alt="Carte de Madagascar" style="max-width: 100%;">
+                <img src="geographie.jpeg" alt="Carte du Cap-Vert">
                 <h2>Géographie</h2>
-                <p>Une île fascinante située au large de l'Afrique de l'Est.</p>
+                <p>Un archipel de 10 îles situé à l'ouest de l'Afrique.</p>
             </div>
             <div class="card">
-                <img src="histoire.jpg" alt="Histoire de Madagascar" style="max-width: 100%;">
+                <img src="histoire.jpg" alt="Histoire du Cap-Vert">
                 <h2>Histoire</h2>
-                <p>Colonisée par la France en 1896, indépendante depuis 1960.</p>
+                <p>Colonisé par le Portugal au 15e siècle, indépendant depuis 1975.</p>
             </div>
             <div class="card">
-                <img src="culture.jpeg" alt="Culture malgache" style="max-width: 100%;">
+                <img src="culture.jpeg" alt="Culture capverdienne">
                 <h2>Culture</h2>
-                <p>Un mélange unique de traditions africaines et asiatiques.</p>
+                <p>Un mélange unique d'influences africaines, portugaises et brésiliennes.</p>
             </div>
         </section>
         
@@ -49,11 +49,11 @@
     
     <script>
         const facts = [
-            "Madagascar est la quatrième plus grande île du monde.",
-            "Le français est l'une des langues officielles, héritée de la colonisation française.",
-            "Environ 90 % de la faune de Madagascar est unique à l'île.",
-            "L'indépendance de Madagascar a été déclarée le 26 juin 1960.",
-            "La capitale de Madagascar est Antananarivo."
+            "Le Cap-Vert est l'un des pays les plus stables d'Afrique.",
+            "La musique capverdienne, comme la morna, est mondialement reconnue.",
+            "Le pays est composé de 10 îles et 5 îlots.",
+            "Le Cap-Vert a obtenu son indépendance du Portugal en 1975.",
+            "La capitale du Cap-Vert est Praia."
         ];
         function showFact() {
             document.getElementById("fact").innerText = facts[Math.floor(Math.random() * facts.length)];
